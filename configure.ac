@@ -139,6 +139,7 @@ AC_CONFIG_FILES([
 	examples/DumperPlugIn/Makefile
 	examples/money/Makefile
 ])
+AC_REQUIRE_AUX_FILE([tap-driver.sh])
 AC_OUTPUT
 
 # ==============================================

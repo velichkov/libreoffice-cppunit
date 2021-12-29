@@ -29,11 +29,11 @@ main( int argc, char* argv[] )
 #ifdef WIN32
   CPPUNIT_NS::TextTestProgressListener progress;
 #else
-  CPPUNIT_NS::BriefTestProgressListener progress;
+  //CPPUNIT_NS::BriefTestProgressListener progress;
+  CPPUNIT_NS::TAPListener progress(CPPUNIT_NS::stdCOut());
 #endif
   controller.addListener( &progress );      
 
-  //CPPUNIT_NS::TAPListener tap(CPPUNIT_NS::stdCOut());
   //controller.addListener( &tap );
 
   // Add the top suite to the test runner
@@ -41,14 +41,14 @@ main( int argc, char* argv[] )
   runner.addTest( CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest() );   
   try
   {
-    CPPUNIT_NS::stdCOut() << "Running "  <<  testPath;
+    //CPPUNIT_NS::stdCOut() << "Running "  <<  testPath;
     runner.run( controller, testPath );
 
-    CPPUNIT_NS::stdCOut() << "\n";
+    //CPPUNIT_NS::stdCOut() << "\n";
 
     // Print test in a compiler compatible format.
-    CPPUNIT_NS::CompilerOutputter outputter( &result, CPPUNIT_NS::stdCOut() );
-    outputter.write(); 
+    //CPPUNIT_NS::CompilerOutputter outputter( &result, CPPUNIT_NS::stdCOut() );
+    //outputter.write(); 
 
 // Uncomment this for XML output
 //    std::ofstream file( "tests.xml" );

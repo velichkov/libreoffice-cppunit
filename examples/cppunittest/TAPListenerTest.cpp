@@ -28,6 +28,7 @@ void
 TAPListenerTest::testSuccess()
 {
 	CPPUNIT_NS::TAPListener listener(CPPUNIT_NS::stdCOut());
+	CPPUNIT_FAIL("test");
 
 	//listener.startTestRun(NULL, NULL);
 	//listener.startSuite(NULL);

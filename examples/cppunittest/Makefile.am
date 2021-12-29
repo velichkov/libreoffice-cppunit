@@ -1,5 +1,9 @@
 EXTRA_DIST = CppUnitTestMain.vcproj CppUnitTestPlugIn.vcproj CppUnitTestPlugIn.cpp
 
+LOG_DRIVER = env AM_TAP_AWK='$(AWK)' $(SHELL) \
+                  $(top_srcdir)/tap-driver.sh
+LOG_DRIVER_FLAGS = --comments --ignore-exit
+
 TESTS = cppunittestmain
 check_PROGRAMS = $(TESTS)
 
