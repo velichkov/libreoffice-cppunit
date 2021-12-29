@@ -40,6 +40,8 @@ cppunittestmain_SOURCES = \
 	SubclassedTestCase.cpp \
 	SubclassedTestCase.h \
 	SynchronizedTestResult.h \
+	TAPListenerTest.cpp \
+	TAPListenerTest.h \
 	TestAssertTest.cpp \
 	TestAssertTest.h \
 	TestCallerTest.cpp \

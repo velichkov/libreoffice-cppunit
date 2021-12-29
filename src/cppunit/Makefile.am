@@ -23,11 +23,12 @@ libcppunit_la_SOURCES = \
   PlugInParameters.cpp \
   Protector.cpp \
   ProtectorChain.h \
-  ProtectorContext.h \
   ProtectorChain.cpp \
+  ProtectorContext.h \
   SourceLine.cpp \
   StringTools.cpp \
   SynchronizedObject.cpp \
+  TAPListener.cpp \
   Test.cpp \
   TestAssert.cpp \
   TestCase.cpp \
@@ -61,7 +62,7 @@ libcppunit_la_SOURCES = \
   Win32DynamicLibraryManager.cpp
 
 libcppunit_la_LDFLAGS= \
- -no-undefined -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+ -Wl,-no-undefined -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
  -release $(LT_RELEASE) $(LIBADD_DL)
 
 libcppunit_la_LIBADD = $(LIBADD_DL)

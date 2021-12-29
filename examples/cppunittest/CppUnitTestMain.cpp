@@ -9,6 +9,7 @@
 #include <stdexcept>
 #include <fstream>
 
+#include <cppunit/extensions/TAPListener.h>
 
 int 
 main( int argc, char* argv[] )
@@ -31,6 +32,9 @@ main( int argc, char* argv[] )
   CPPUNIT_NS::BriefTestProgressListener progress;
 #endif
   controller.addListener( &progress );      
+
+  //CPPUNIT_NS::TAPListener tap(CPPUNIT_NS::stdCOut());
+  //controller.addListener( &tap );
 
   // Add the top suite to the test runner
   CPPUNIT_NS::TestRunner runner;

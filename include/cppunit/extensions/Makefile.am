@@ -7,6 +7,7 @@ libcppunitinclude_HEADERS = \
 	Orthodox.h \
 	RepeatedTest.h \
 	ExceptionTestCaseDecorator.h \
+	TAPListener.h \
 	TestCaseDecorator.h \
 	TestDecorator.h \
 	TestFactoryRegistry.h \
